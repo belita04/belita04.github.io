@@ -1,89 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="ko">
   <head>
-    <meta charset="utf-8">
-    <title>
-      Portfolio of Lee Myeongjin
-    </title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
+    <title>Portfolio of Lee Myeongjin</title>
+
+    <meta name="author" content="Lee Myeongjin" />
+    <meta name="description" content="이명진의 개발자 포트폴리오입니다." />
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
-    <header><h1>개발자 이명진의 포트폴리오</h1></header>
+    <!-- 페이지 헤더 -->
+    <header>
+      <h1>개발자 이명진의 포트폴리오</h1>
+    </header>
+
+    <!-- 네비게이션 -->
     <nav>
-      <a href="#overview">소개</a>
-      <a href="#career">경력</a>
-      <a href="#education">학력</a>
-      <a href="#research">연구</a>
-      <a href="#projects">프로젝트</a>
+      <a href="#overview">🐶 소개</a>
+      <a href="#career">🐱 경력</a>
+      <a href="#education">🦊 학력</a>
+      <a href="#research">🐻 전공</a>
+      <a href="#projects">🐯 프로젝트</a>
     </nav>
+
+    <!-- 소개 -->
     <section class="overview" id="overview">
-      <img src="./media/profile.png" alt="프로필 이미지" class="profile-img">
+      <img src="./media/profile.gif" alt="프로필 이미지" class="profile-img" />
       <div class="contact">
         <h2>Contact & Channels</h2>
         <div class="contact-item">
           <span class="label">✉️ e-mail:</span>
-          <a href="apricotgy3mj@gmail.com" target="_blank"> apricotgy3mj@gmail.com</a>
+          <a href="mailto:apricotgy3mj@gmail.com" target="_blank"> apricotgy3mj@gmail.com</a>
         </div>
         <div class="contact-item">
           <span class="label">📞 phone:</span>
-          <a href="tel:+821099999999" target="_blank"> 010-9999-9999</a>
+          <a href="tel:+821099999999" target="_blank">010-9999-9999</a>
         </div>
         <div class="contact-item">
-          <span class="label">🐙 Github:</span>
-          <a href="https://github.com/belita04" target="_blank"> https://github.com/belita04</a>
+          <span class="label">🦝 Github:</span>
+          <a href="https://github.com/belita04" target="_blank">https://github.com/belita04</a>
         </div>
         <div class="contact-item">
-          <span class="label">🔗 LinkedIn:</span>
-          <a href="https://www.linkedin.com/in/yun-jong-ha-4368781a1/" target="_blank"> YunJong Ha</a>
-        </div>
-        <div class="contact-item">
-          <span class="label">💻 Blog:</span>
-          <a href="https://hayunjong83.tistory.com/" target="_blank"> 콤퓨타 사이언티스트</a>
+          <span class="label">🍀 Blog:</span>
+          <a href="https://blog.naver.com/owo_oooo" target="_blank">블로그지수함수를 미분적분</a>
         </div>
       </div>
     </section>
+
+    <!-- 경력 -->
     <section class="career" id="career">
-      <h2>💼 경력사항</h2>
+      <h2>🐱 경력사항</h2>
       <details>
-        <summary>덕성여자대학교 디지털소프트웨어공학부(2025.03~)</summary>
-        <div>
-          <ul>
-            <li>덕성여자대학교 디지털소프트웨어공학부 시간강의</li>
-            <li>2025학년도 1학기 데이터시각화 및 해석(Data Visualization and Analysis)</li>
-            <li>2025학년도 1학기 인터넷 기초(Introduction to Internet)</li>
-          </ul>
-        </div>
+        <summary>메가커피 주말 마감 (약 1년)</summary>
+        <ul>
+          <li>청어람 수학학원 조교 (약 1년)</li>
+        </ul>
       </details>
     </section>
-    
+
+    <!-- 학력 -->
     <section class="education" id="education">
-      <h2>🏫 학력</h2>
+      <h2>🦊 학력</h2>
+      <details>
+        <summary>덕성여자대학교 재학 (2024.03~)</summary>
+        <ul>
+          <li>영파여자고등학교 졸업</li>
+          <li>영파여자중학교 졸업</li>
+          <li>토성초등학교 졸업</li>
+        </ul>
+      </details>
+    </section>
+
+    <!-- 전공 -->
+    <section class="research" id="research">
+      <h2>🐻 전공</h2>
       <ul>
-        <li>호그와트 마법학교 대학원 석사</li>
+        <li>디지털소프트웨어공학부</li>
+        <li>2024 수강: 프로그래밍개론</li>
+        <li>2025 수강: 인터넷 기초, 공학수학, C언어</li>
       </ul>
     </section>
-    
-    <section class="research" id="research">
-      <h2>📚 연구</h2>
-    </section>
-    
+
+    <!-- 프로젝트 -->
     <section class="projects" id="projects">
-      <h2>📁 프로젝트</h2>
+      <h2>🐯 프로젝트</h2>
       <ol>
-        <li>덕성여자대학교 맛집 소개 프로젝트<br>
+        <li>
+          덕성여자대학교 맛집 소개 프로젝트<br />
           : 덕성여자대학교 주변의 맛집 정보를 담은 웹 사이트 제작
           <div class="project-table-wrapper">
             <table class="project-table">
               <tr>
                 <td>
                   <a href="https://hayunjong2025.github.io/duksung_diner/" target="_blank">
-                    <img src="./media/profile.png" alt="프로젝트 1" />
+                    <img src="./media/food.png" alt="프로젝트 미리보기" />
                   </a>
                 </td>
                 <td>
-                  <a href="https://github.com/hayunjong2025/duksung_diner">https://github.com/hayunjong2025/duksung_diner</a>
-                  <!-- <a href="https://hayunjong2025.github.io/duksung_diner/" target="_blank">
-                    <img src="./media/profile.png" alt="프로젝트 2" /> -->
+                  <a href="https://github.com/hayunjong2025/duksung_diner" target="_blank">
+                    GitHub 저장소 링크
                   </a>
                 </td>
               </tr>
@@ -91,7 +107,19 @@
           </div>
         </li>
       </ol>
-      
     </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- 고정된 푸터 -->
+    <footer>
+      <p>© 2025 이명진 | 이메일: apricotgy3mj@gmail.com</p>
+    </footer>
   </body>
 </html>
