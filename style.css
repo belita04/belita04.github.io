@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -54,7 +55,7 @@ nav a:hover {
 }
 
 /* 소개 영역 */
-.overview {
+section#overview {
   display: flex;
   max-width: 800px;
   width: 100%;
@@ -71,27 +72,18 @@ nav a:hover {
   margin-right: 2rem;
 }
 
-.contact h2 {
+section#overview article h2 {
   margin-top: 0;
 }
 
-.contact-item {
-  display: flex;
-  gap: 0.5rem;
-  margin: 0.5rem;
+section#overview article ul {
+  list-style-type: none;
+  padding: 0;
 }
 
-.label {
-  width: 150px;
+section#overview article li {
+  margin-bottom: 1rem;
   font-size: 20px;
-  font-weight: bold;
-}
-
-.contact a {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 20px;
-  color: black;
 }
 
 /* 각 섹션 공통 스타일 */
@@ -104,26 +96,19 @@ section {
   border-radius: 10px;
 }
 
-/* 프로젝트 테이블 */
-.project-table-wrapper {
-  justify-content: center;
+/* 프로젝트 영역 */
+section#projects article {
   margin-top: 1rem;
 }
 
-.project-table {
-  border-collapse: collapse;
-  border: 2px solid #333;
+figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.project-table td {
-  border: 1px solid #666;
-  width: 10vw;
-  padding: 1rem;
-  text-align: center;
-  background-color: #fafafa;
-}
-
-.project-table img {
+figure img {
   width: 10vw;
   height: auto;
   border-radius: 8px;
@@ -131,8 +116,15 @@ section {
   transition: transform 0.3s ease;
 }
 
-.project-table img:hover {
+figure img:hover {
   transform: scale(1.05);
+}
+
+figcaption {
+  margin-top: 0.5rem;
+  font-size: 14px;
+  word-break: break-all;
+  text-align: center;
 }
 
 /* 푸터 스타일 */
@@ -146,4 +138,9 @@ footer {
   padding: 0.5rem;
   font-weight: bold;
   font-size: 0.9rem;
+}
+
+/* 여백용 스페이서 */
+.spacer {
+  height: 150px;
 }
