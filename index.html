@@ -3,10 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <title>Portfolio of Lee Myeongjin</title>
-
     <meta name="author" content="Lee Myeongjin" />
     <meta name="description" content="이명진의 개발자 포트폴리오입니다." />
-
     <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
@@ -15,7 +13,7 @@
       <h1>개발자 이명진의 포트폴리오</h1>
     </header>
 
-    <!-- 네비게이션 -->
+    <!-- 내비게이션 -->
     <nav>
       <a href="#overview">🐶 소개</a>
       <a href="#career">🐱 경력</a>
@@ -25,31 +23,33 @@
     </nav>
 
     <!-- 소개 -->
-    <section class="overview" id="overview">
-      <img src="./media/profile.gif" alt="프로필 이미지" class="profile-img" />
-      <div class="contact">
+    <section id="overview">
+      <article>
+        <img src="./media/profile.gif" alt="프로필 이미지" class="profile-img" />
         <h2>Contact & Channels</h2>
-        <div class="contact-item">
-          <span class="label">✉️ e-mail:</span>
-          <a href="mailto:apricotgy3mj@gmail.com" target="_blank"> apricotgy3mj@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <span class="label">📞 phone:</span>
-          <a href="tel:+821099999999" target="_blank">010-9999-9999</a>
-        </div>
-        <div class="contact-item">
-          <span class="label">🦝 Github:</span>
-          <a href="https://github.com/belita04" target="_blank">https://github.com/belita04</a>
-        </div>
-        <div class="contact-item">
-          <span class="label">🍀 Blog:</span>
-          <a href="https://blog.naver.com/owo_oooo" target="_blank">블로그지수함수를 미분적분</a>
-        </div>
-      </div>
+        <ul>
+          <li>
+            <strong>✉️ e-mail:</strong>
+            <a href="mailto:apricotgy3mj@gmail.com" target="_blank"> apricotgy3mj@gmail.com</a>
+          </li>
+          <li>
+            <strong>📞 phone:</strong>
+            <a href="tel:+821099999999" target="_blank">010-9999-9999</a>
+          </li>
+          <li>
+            <strong>🦝 Github:</strong>
+            <a href="https://github.com/belita04" target="_blank">https://github.com/belita04</a>
+          </li>
+          <li>
+            <strong>🍀 Blog:</strong>
+            <a href="https://blog.naver.com/owo_oooo" target="_blank">블로그지수함수를 미분적분</a>
+          </li>
+        </ul>
+      </article>
     </section>
 
     <!-- 경력 -->
-    <section class="career" id="career">
+    <section id="career">
       <h2>🐱 경력사항</h2>
       <details>
         <summary>아르바이트</summary>
@@ -61,7 +61,7 @@
     </section>
 
     <!-- 학력 -->
-    <section class="education" id="education">
+    <section id="education">
       <h2>🦊 학력</h2>
       <details>
         <summary>덕성여자대학교 재학 (2024.03~)</summary>
@@ -74,11 +74,10 @@
     </section>
 
     <!-- 전공 -->
-    <section class="research" id="research">
+    <section id="research">
       <h2>🐻 전공</h2>
       <details>
         <summary>디지털소프트웨어공학부</summary>
-        <!-- detail 안에 summary를 써야 <ul>아래 내용이 숨겨진다.-->>
         <ul>
           <li>2024 수강: 프로그래밍개론</li>
           <li>2025 수강: 인터넷 기초, 공학수학, C언어</li>
@@ -87,44 +86,28 @@
     </section>
 
     <!-- 프로젝트 -->
-    <section class="projects" id="projects">
+    <section id="projects">
       <h2>🐯 프로젝트</h2>
-      <ol>
-        <li>
-          덕성여자대학교 맛집 소개 프로젝트<br />
-          : 다이닝 코드 사이트에서 나눈 순위 별 덕성여대 주변 맛집
-          <div class="project-table-wrapper">
-            <table class="project-table">
-              <tr>
-                <td>
-                  <a href="https://belita04.github.io/duksung_diner/" target="_blank">
-                    <img src="./media/food.png" alt="프로젝트 미리보기" />
-                  </a>
-                </td>
-                <td>
-                  <a href="https://github.com/belita04/duksung_diner" target="_blank">
-                    https://github.com/belita04/duksung_diner
-      
-                  </a>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </li>
-      </ol>
+      <article>
+        <h3>덕성여자대학교 맛집 소개 프로젝트</h3>
+        <p>다이닝 코드 사이트에서 나눈 순위 별 덕성여대 주변 맛집</p>
+        <figure>
+          <a href="https://belita04.github.io/duksung_diner/" target="_blank">
+            <img src="./media/food.png" alt="프로젝트 미리보기" />
+          </a>
+          <figcaption>
+            <a href="https://github.com/belita04/duksung_diner" target="_blank">
+              https://github.com/belita04/duksung_diner
+            </a>
+          </figcaption>
+        </figure>
+      </article>
     </section>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <!-- 고정된 푸터 -->
+    <section class="spacer"></section>
+    <!-- 푸터 -->
     <footer>
       <p>© 2025 이명진 | 이메일: apricotgy3mj@gmail.com 포트폴리오 페이지</p>
     </footer>
   </body>
 </html>
+
