@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>정보 제출 폼</title>
+    <script>
+        function submitForm(event) {
+            event.preventDefault();
+
+            const formData = new FormData(event.target);
+            const params = new URLSearchParams();
+            formData.forEach((value, key) => {
+                params.append(key, value);
+            });
+
+            fetch("https://script.google.com/macros/s/AKfycbzwgqkUZZI4POXbeKU6ociMH4TxJYC_-izCc-FsuFGnxBX2zQx4_rq2YsEBDXcYcSeS/exec", {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                body: params.toString()
+            }).then(() => {
+                alert("정보가 성공적으로 전송되었습니다!");
+            }).catch(error => {
+                alert("전송 실패: " + error.message);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div align="center">
+        <form onsubmit="submitForm(event)">
+            <table>
+                <tr>
+                    <!-- 왼쪽 박스: 기본 정보 -->
+                    <td>
+                        <fieldset>
+                            <legend>기본 정보</legend>
+
+                            <div>
+                                <label for="name">이름</label><br>
+                                <input type="text" id="name" name="name" placeholder="이름을 입력하세요" required>
+                            </div><br>
+
+                            <div>
+                                <label for="email">이메일</label><br>
+                                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                            </div><br>
+
+                            <div>
+                                <label for="job">직업 선택 (데이터 목록)</label><br>
+                                <input list="job-options" id="job" name="job" placeholder="직업을 선택하세요">
+                                <datalist id="job-options">
+                                    <option value="학생">
+                                    <option value="개발자">
+                                    <option value="교수">
+                                    <option value="대통령">
+                                    <option value="기타">
+                                </datalist>
+                            </div><br>
+
+                            <div>
+                                <label>관심 분야 (체크박스)</label><br>
+                                <label><input type="checkbox" name="interests" value="웹"> 웹</label><br>
+                                <label><input type="checkbox" name="interests" value="앱"> 앱</label><br>
+                                <label><input type="checkbox" name="interests" value="AI"> AI</label>
+                            </div>
+                        </fieldset>
+                    </td>
+
+                    <!-- 오른쪽 박스: 추가 정보 -->
+                    <td>
+                        <fieldset>
+                            <legend>추가 정보</legend>
+
+                            <div>
+                                <label>성별 (라디오 버튼)</label><br>
+                                <label><input type="radio" name="gender" value="남성" required> 남성</label><br>
+                                <label><input type="radio" name="gender" value="여성"> 여성</label><br>
+                                <label><input type="radio" name="gender" value="기타"> 기타</label>
+                            </div><br>
+
+                            <div>
+                                <label for="level">학습 수준 (콤보박스)</label><br>
+                                <select id="level" name="level" required>
+                                    <option value="">선택하세요</option>
+                                    <option value="초급">초급</option>
+                                    <option value="중급">중급</option>
+                                    <option value="고급">고급</option>
+                                </select>
+                            </div><br>
+
+                            <div>
+                                <label for="message">하고 싶은 말 (여러줄 텍스트)</label><br>
+                                <textarea id="message" name="message" rows="4" placeholder="하고 싶은 말을 적어주세요" required></textarea>
+                            </div>
+                        </fieldset>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <button type="submit">제출</button>
+        </form>
+    </div>
+</body>
+</html>
